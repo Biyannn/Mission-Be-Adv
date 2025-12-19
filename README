@@ -1,0 +1,20 @@
+// ## Tech Stack
+// - Node.js
+// - Express.js
+// - MySQL
+// - JWT Authentication
+// - Multer File Upload
+// - Nodemailer
+// - REST API
+
+// ## Features
+// - Auth (Register, Login, Verify Email)
+// - Protected Routes
+// - Upload & Delete Image
+// - Static File Serving
+// - Pagination & Filtering
+
+// ## Deployment;
+// - Backend: Railway
+// - Database: MySQL
+
