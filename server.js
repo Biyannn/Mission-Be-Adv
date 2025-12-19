@@ -4,6 +4,8 @@ require("dotenv").config();
 const path = require("path");
 const app = express();
 
+console.log("🔥 SERVER.JS TERJALAN");
+
 // ===== Middleware =====
 app.use(cors());
 app.use(express.json());
@@ -29,6 +31,13 @@ app.use(
   express.static(path.join(__dirname, "uploads"))
 );
 
+// ===== Debug Endpoint =====
+app.get("/debug", (req, res) => {
+  res.json({
+    message: "DEBUG OK",
+    envPort: process.env.PORT,
+  });
+});
 
 
 // ===== Test Endpoint =====
