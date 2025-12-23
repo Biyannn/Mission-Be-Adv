@@ -78,7 +78,7 @@ exports.resendVerification = async (req, res) => {
 
     const token = uuidv4();
     await userModel.update(user.id, { verification_token: token });
-    if (process.env.NODE_ENV !== "test") {
+    if (process.env.NODE_ENV !== "production") {
     await mailService.sendVerificationEmail(email, user.name, token);
     }
 
